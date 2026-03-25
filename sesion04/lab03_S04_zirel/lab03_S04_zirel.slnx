@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="lab03_S04_zirel/lab03_S04_zirel.vcxproj" Id="b6da87de-f509-41a2-9424-6c1ae831bec9" />
+</Solution>
