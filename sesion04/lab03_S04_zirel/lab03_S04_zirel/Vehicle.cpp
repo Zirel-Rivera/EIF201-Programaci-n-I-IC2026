@@ -10,15 +10,10 @@ namespace UNA {
 		this->year = year;
 		this->year = year;
 		this->kilometers = kilometers;
-		this->isActive= true;
+		this->isActive = true;
 	}
 
 	std::string UNA::Vehicle::getPlate() const
-	{
-		return std::string();
-	}
-
-	std::string Vehicle::getPlate() const
 	{
 		return std::string();
 	}

@@ -1,20 +1,27 @@
 #include "Fleet.h"
 #include <iostream>
 
+
 UNA::Fleet::Fleet(int capacity)
 {
-	this->capacity = 3;
+	this->capacity = capacity;
+	this->amount = 0;
+	this->vehicles = new Vehicle * [this->capacity];
 }
 
 UNA::Fleet::~Fleet()
 {
+	for (int i = 0; i < amount; i++) {
+		delete vehicles[i];
+	}
+	delete[] vehicles;
 }
 
 void UNA::Fleet::registerVehicle(Vehicle* newVehicle)
 {
 	if (amount == capacity) {
-		capacity == capacity * 2;
-		Vehicle** temp = new Vehicle * [amount];
+		capacity = capacity * 2;
+		Vehicle** temp = new Vehicle * [capacity];
 		for (int i = 0; i < amount; i++) {
 			temp[i] = vehicles[i];
 		}
@@ -67,7 +74,7 @@ bool UNA::Fleet::eliminate(std::string plate)
 			}
 
 			delete[] vehicles[i];
-			for (int j = i; j < amount; j ++) {
+			for (int j = i; j < amount -1; j ++) {
 				vehicles[j] = vehicles[j + 1];
 			}
 			amount--;
