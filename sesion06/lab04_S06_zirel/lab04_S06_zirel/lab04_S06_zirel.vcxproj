@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="lab04_S06_zirel.cpp" />
     <ClCompile Include="Skill.cpp" />
+    <ClCompile Include="Warrior.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Skill.h" />
+    <ClInclude Include="Warrior.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
